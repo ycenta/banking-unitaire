@@ -4,15 +4,15 @@ const app = express();
 app.use(express.json());
 
 app.put("/users/:id/accounts/debit", (req, res) => {
-    res.send("Hello World");
+    let id = req.params.id;
 });
 
 app.put("/users/:id/accounts/credit", (req, res) => {
-    res.send("Hello World");
+    let id = req.params.id;
 });
 
 app.get("/users/:id/accounts", (req, res) => {
-    res.send("Hello World");
+    let id = req.params.id;
 });
 
 app.listen(3000, () => console.log("Server started on port 3000"));
