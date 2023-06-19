@@ -1,0 +1,12 @@
+name: 'Test unitaires'
+on: 
+    push:
+      branches:
+        - main
+jobs:
+  unit-test:
+    runs-on: ${{ fromJSON('["ubuntu-latest", "self-hosted"]')[github.repository == 'github/docs-internal'] }}
+    steps:
+      - name: test Unit
+        run: npm run test
+        
